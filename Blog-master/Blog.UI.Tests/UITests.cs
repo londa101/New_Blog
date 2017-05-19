@@ -17,7 +17,7 @@ namespace Blog.UI.Tests
         public void CheckSiteLoad()
         {
             IWebDriver driver = BrowserHost.Instance.Application.Browser;
-            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
+            WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(120));
 
 
             driver.Navigate().GoToUrl("@http://localhost:60634/Article/List");

@@ -20,7 +20,9 @@ namespace Blog.UI.Tests
             WebDriverWait wait = new WebDriverWait(driver, TimeSpan.FromSeconds(120));
 
 
-            driver.Navigate().GoToUrl("@http://localhost:60634/Article/List");
+          //  driver.Navigate().GoToUrl("@http://localhost:60634/Article/List");
+            driver.Navigate().GoToUrl(BrowserHost.RootUrl);
+
 
             var logo = wait.Until(w => w.FindElement(By.XPath("/html/body/div[1]/div/div[1]/a")));
 

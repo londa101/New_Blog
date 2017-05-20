@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using TestStack.Seleno;
+﻿using OpenQA.Selenium.Chrome;
 using TestStack.Seleno.Configuration;
 
 namespace Blog.UI.Tests
@@ -15,9 +10,10 @@ namespace Blog.UI.Tests
 
         static BrowserHost()
         {
-            Instance.Run("Blog", 60639);
+          //  Instance.Run("Blog", 60639);
+            Instance.Run("Blog", 60639, w => w.WithRemoteWebDriver(() => new ChromeDriver()));
 
-            //RootUrl = Instance.Application.Browser.Url;
+            RootUrl = Instance.Application.Browser.Url;
         }
     }
 }

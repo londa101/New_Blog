@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium.Chrome;
+
 using TestStack.Seleno.Configuration;
 
 namespace Blog.UI.Tests

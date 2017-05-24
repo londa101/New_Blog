@@ -1,12 +1,14 @@
 ﻿using OpenQA.Selenium;
 using OpenQA.Selenium.Support.UI;
 using System;
+using System.Configuration;
 
 namespace Blog.Pages
 {
     public class BasePage
     {
-       
+
+            protected string url = ConfigurationManager.AppSettings["URL"];
             private IWebDriver driver;
             private WebDriverWait wait;
 

@@ -8,13 +8,14 @@ using System.Threading.Tasks;
 
 namespace Blog.UI.Tests.Pages.HomePage
 {
-    public partial class HomePage
+    public partial class HomePage : BasePage
     {
         private IWebDriver driver;
         private WebDriverWait wait;
         private string url = @"http://localhost:60634/Article/List";
 
         public HomePage(IWebDriver driver)
+            : base(driver)
         {
             this.driver = driver;
             this.wait = new WebDriverWait(driver, TimeSpan.FromSeconds(60));
